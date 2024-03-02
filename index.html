@@ -1,19 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Macro From</title>
+    <!-- css add  -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- Daisy and talwind cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <header></header>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            ></ul>
+          </div>
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><img src="images/home.svg" alt="" /></li>
+            <li>
+              <img src="images/toll (2).svg" alt="" />
+            </li>
+
+            <li><img src="images/friend.svg" alt="" /></li>
+            <li><img src="images/flag.svg" alt="" /></li>
+          </ul>
+        </div>
+        <div class="navbar-end ">
+          <a class="btn bg-[#797DFC] rounded-3xl">Sign In</a>
+        </div>
+      </div>
+      <!-- banner section  -->
+      <div class=" bg-base-200 bg h-[550px] bg-[#12132D]  ">
+        <div class="flex flex-col lg:flex-row justify-around  ">
+          <div class=" lg:text-left text-white my-auto">
+            <h1 class="text-5xl font-bold">Welcome to the <br> ReTro Forum</h1>
+            <p class="py-6">Share your favorite opinion and win and wp forum coffee mug!</p>
+             <div class="flex">
+                <input type="text" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs">
+                <button class="btn btn-primary">Primary</button>
+             </div>
+          </div>
+          <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 h-[288px] mt-20">
+            <div class="flex justify-center text-center items-center my-auto gap-20">
+                <div>
+                    <ul>
+                        <li>Registered Users</li>
+                        <li>Forum</li>
+                        <li>Topics</li>
+                        <li>Replies</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>01</li>
+                        <li>04</li>
+                        <li>05</li>
+                        <li>03</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
     <main></main>
     <footer></footer>
-    
+
     <!-- script add  -->
     <script src="js/mcro.js"></script>
-</body>
+  </body>
 </html>
