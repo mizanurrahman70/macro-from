@@ -66,13 +66,14 @@ const dataShow = (data) => {
                     </div>
                   </div>
                   <div   >
-                    <img class='lg:ml-72' onclick="msg('${item.title}',${item.view_count})" src="images/email 1.svg" alt="" />
+                    <img id='img' class='lg:ml-72' onclick="msg('${item.title}',${item.view_count})" src="images/email 1.svg" alt="" />
                   </div>
                 </div>
               </div>
             </div>
         
         `;
+      
     //  document.getElementById('color').classList.add(`${post?.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"}`)
     mainDiv.appendChild(newDiv);
     document.getElementById('spinner').classList.add('hidden')
