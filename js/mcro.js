@@ -18,24 +18,25 @@ const dataShow = (data) => {
     const newDiv = document.createElement("div");
     
     newDiv.innerHTML = `
-        <div class=" lg:flex justify-around h-[full] lg:h-[270px]  space-y-6">
+        <div class=" lg:flex justify-around h-[full] lg:h-[270px] mb-5 shadow rounded-3xl bg-[#F3F3F5]">
               <div class="mt-10">
                 <div class="indicator">
                   <span id='color' class="indicator-item badge badge-secondary "></span> 
-                  <div class="grid w-32 h-32 bg-base-300 place-items-center"><img  src=${item.image} alt=""></div>
+                  <div class="grid w-32 h-32 bg-base-300 place-items-center "><img  src=${item.image} alt=""></div>
                 </div>
               </div>
               <div class="mt-10 space-y-5">
                 <div class="flex gap-4">
-                  <h1># <span>${item.category}</span></h1>
-                  <h2>Author : <span>${item.author.name}</span></h2>
+                  <h1 class='font-semibold'># <span>${item.category}</span></h1>
+                  <h2 class='font-semibold'>Author : <span>${item.author.name}</span></h2>
                 </div>
-                <div><h1 id='title'>${item.title}</h1></div>
+                <div><h1 id='title' class='text-3xl font-semibold text-black'>${item.title}</h1></div>
                 <div>
-                  <p class="w-[300px] lg:w-[569px]">
+                  <p class="w-[300px] lg:w-[569px] font-medium">
                    ${item.description}
                   </p>
                 </div>
+                <div class="divider"></div>
                 <div class="lg:divider"></div>
                 <div class="flex space-x-9">
                   <div class="flex">
@@ -54,8 +55,8 @@ const dataShow = (data) => {
                       <p>${item.posted_time}</p>
                     </div>
                   </div>
-                  <div  >
-                    <img onclick="msg('${item.title}',${item.view_count})" src="images/email 1.svg" alt="" />
+                  <div   >
+                    <img class='lg:ml-72' onclick="msg('${item.title}',${item.view_count})" src="images/email 1.svg" alt="" />
                   </div>
                 </div>
               </div>
@@ -85,13 +86,13 @@ const msg = (tit, viw) => {
   // const aph1=document.getElementById('aph1')
   // aph1.innerText=title
   newDiv.innerHTML = `
-  <div class="w-[full] lg:w-[326px] h-[82px] bg-[#F3F3F4] flex items-center mx-auto rounded-2xl justify-around">
+  <div class="w-[full] lg:w-[326px] h-[82px] bg-[#F3F3F4] flex items-center mx-auto rounded-2xl justify-around shadow-lg mb-4">
   <div>
-  <h1 id="h1">${tit}</h1>
+  <h1 id="h1" class='font-semibold'>${tit}</h1>
 </div>
 <div class="flex">
   <img src="images/tabler-icon-eye.svg" alt="">
-  <p id="v">${viw}</p>
+  <p id="v" class='font-semibold'>${viw}</p>
 </div>
 </div>
  `;
@@ -145,11 +146,11 @@ const searchHandle =async () => {
       ` https://openapi.programming-hero.com/api/retro-forum/posts?category=${src}`
     );
     const data = await response.json();
-    const mainData=data.posts
-    
+    const srcData=data.posts
+    dataShow (srcData)
   };
 
-searchHandle();
+  
 
 latestData();
 dataLoad();
