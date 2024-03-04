@@ -66,7 +66,7 @@ const dataShow = (data) => {
                     </div>
                   </div>
                   <div   >
-                    <img id='img' class='lg:ml-72' onclick="msg('${item.title}',${item.view_count})" src="images/email 1.svg" alt="" />
+                    <img id='img' class='lg:ml-72' onclick="msg('${item.title.replace(/'/g,'@')}',${item.view_count})" src="images/email 1.svg" alt="" />
                   </div>
                 </div>
               </div>
