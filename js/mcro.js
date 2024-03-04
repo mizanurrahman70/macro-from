@@ -13,6 +13,7 @@ const dataLoad = async () => {
 };
 
 const dataShow = (data) => {
+  mainDiv.textContent=''
   data.forEach((item) => {
     let isActive = '';
     if (item.isActive) {
@@ -22,7 +23,7 @@ const dataShow = (data) => {
       isActive=`<span id='color' class="indicator-item badge badge-secondary "></span> `
     } 
     
-    // mainDiv.textContent=''
+    
     const newDiv = document.createElement("div");
     
     newDiv.innerHTML = `
