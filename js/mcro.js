@@ -14,6 +14,14 @@ const dataLoad = async () => {
 
 const dataShow = (data) => {
   data.forEach((item) => {
+    let isActive = '';
+    if (item.isActive) {
+      isActive=`<span id='color' class="indicator-item badge bg-green-700 badge-secondary border-none"></span>  `
+    }
+    else{
+      isActive=`<span id='color' class="indicator-item badge badge-secondary "></span> `
+    } 
+    
     // mainDiv.textContent=''
     const newDiv = document.createElement("div");
     
@@ -21,8 +29,9 @@ const dataShow = (data) => {
         <div class=" lg:flex justify-around h-[full] lg:h-[270px] mb-5 shadow rounded-3xl bg-[#F3F3F5]">
               <div class="mt-10">
                 <div class="indicator">
-                  <span id='color' class="indicator-item badge badge-secondary "></span> 
-                  <div class="grid w-32 h-32 bg-base-300 place-items-center "><img  src=${item.image} alt=""></div>
+                  ${isActive}
+
+                  <div class="grid w-32 h-32 bg-base-300 place-items-center  "><img class='rounded-3xl' src=${item.image} alt=""></div>
                 </div>
               </div>
               <div class="mt-10 space-y-5">
@@ -68,11 +77,6 @@ const dataShow = (data) => {
     document.getElementById('spinner').classList.add('hidden')
     // document.getElementById('spinner').classList.add('hidden')
    
-    // if (item.isActive === true) {
-    //   const color = document.getElementById("color")
-    //     .classList.add("bg-green-600");
-    // } 
-    
   //  console.log(item.isActive)
   });
 };
