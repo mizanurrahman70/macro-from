@@ -84,7 +84,7 @@ const dataShow = (data) => {
 };
 let sum = 0;
 const msg = (tit, viw) => {
-  
+  // console(tit,viw)
   sum++;
   const update = (document.getElementById("update").innerText = sum);
 
